@@ -68,7 +68,7 @@ function Home() {
           <div className="row">
             <div className="col-lg-6 mb-5 mb-lg-0">
               <div className="img-years">
-                <img src="https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&cs=tinysrgb&dpr=6&h=650&w=940" alt="Image" className="img-fluid" />
+                <img src="https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&cs=tinysrgb&dpr=6&h=650&w=940" alt="description_image" className="img-fluid" />
               </div>
 
             </div>
