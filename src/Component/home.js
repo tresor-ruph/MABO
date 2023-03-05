@@ -1,6 +1,11 @@
 import React from "react";
 import { FaHandsHelping } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import image_1 from "./../assets/images/Image_1.jpg"
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
+
 
 function Home() {
   return (
@@ -35,8 +40,9 @@ function Home() {
 
               <nav className="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul className="site-menu main-menu js-clone-nav ml-auto ">
-                  <li><a href="#team" className="nav-link">Equipe </a></li>
-                  <li><a href="#contactUs" className="nav-link">Contact</a></li>
+                  <li><a href="#team" className="nav-link">A propos de nous </a></li>
+                  <li><a href="#team" className="nav-link">Services </a></li>
+                  <li><a href="#contactUs" className="nav-link">Contactez nous</a></li>
                 </ul>
               </nav>
             </div>
@@ -49,14 +55,14 @@ function Home() {
 
       <div className="ftco-blocks-cover-1">
         <div className="site-section-cover overlay" data-stellar-background-ratio="0.5" style={{
-          backgroundImage: "url(" + "https://images.pexels.com/photos/339620/pexels-photo-339620.jpeg?auto=compress&cs=tinysrgb&dpr=6&h=650&w=940" + ")"
+          backgroundImage: "url(" + "https://user-images.githubusercontent.com/52448401/222968551-25cc3a63-8fdb-48af-b9eb-842de4b96a5a.jpeg" + ")"
         }}>
           <div className="container">
             <div className="row align-items-center justify-content-left text-left">
               <div className="col-md-7 ">
-                <h1 className="mb-3" style={{ fontFamily: 'revert' }}>HELP RECOVER</h1>
-                <p style={{ fontFamily: 'revert', textAlign: 'justify' }}>Avec la crise sanitaire et les différentes mesures qui ont suivies pour la limitation de celle-ci, de nombreuses personnes se sont retrouvées isolées. La tranche d'âge principalement impactée est celle des personnes âgées qui ne pouvaient plus bénéficier des visites de leurs proches...</p>
-                <p><a href="https://github.com/tresor-ruph/projet-Integration/wiki/Description-du-projet" className="btn btn-primary">En savoir plus</a></p>
+                <h1 className="mb-3" style={{ fontFamily: 'revert' }}>XXXX</h1>
+                <p style={{ fontFamily: 'revert', textAlign: 'justify' }}>Nous sommes spécialisés dans la fourniture de services de transport sûrs et efficaces pour les particuliers, les entreprises et les organisations de la région. Que vous ayez besoin de déplacer des biens, des équipements ou des personnes, nous sommes là pour vous aider.</p>
+                {/* <p><a href="https://github.com/tresor-ruph/projet-Integration/wiki/Description-du-projet" className="btn btn-primary">En savoir plus</a></p> */}
               </div>
             </div>
           </div>
@@ -68,16 +74,16 @@ function Home() {
           <div className="row">
             <div className="col-lg-6 mb-5 mb-lg-0">
               <div className="img-years">
-                <img src="https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&cs=tinysrgb&dpr=6&h=650&w=940" alt="description_image" className="img-fluid" />
+                <img src={image_1} alt="description_image" className="img-fluid" />
               </div>
 
             </div>
             <div className="col-lg-5 ml-auto pl-lg-5 text-center">
-              <h2 className="text-red text-center">Notre solution</h2>
-              <p className="mb-5 lead" style={{ fontFamily: 'revert', textAlign: 'justify' }}>Nous vous mettons en contact avec des personnes vérifiées de votre entourage qui sont prêts à vous aider.  Ensuite, nous veillons à ce que tous les deux, vous soyez assurés et que tout se passe bien.<br></br>
-                <br></br>En plus de son volet humanitaire, nous vous permettons de garder un contact avec vos êtres chers au moyen de discussions privées et de groupes de discussion.
+              {/* <h2 className="text-red text-center">A propos de nous</h2> */}
+              <p className="mb-5 lead" style={{ fontFamily: 'revert', textAlign: 'justify' }}>Notre flotte de véhicules bien entretenus et nos chauffeurs expérimentés sont équipés pour gérer toutes sortes de besoins en matière de transport. Des livraisons locales aux trajets longue distance, nous avons les ressources et l'expertise pour mener à bien le travail dans les délais impartis et dans les limites du budget<br></br>
+                <br></br>Nos services sont disponibles 24 heures sur 24 et 7 jours sur 7, vous pouvez donc compter sur nous pour être là chaque fois que vous avez besoin de nous.
               </p>
-              <p><a href="https://www.dropbox.com/s/4etblliogcqi319/app-release.apk?dl=0" className="btn btn-primary">Télécharger l'application</a></p>
+              {/* <p><a href="https://www.dropbox.com/s/4etblliogcqi319/app-release.apk?dl=0" className="btn btn-primary">Télécharger l'application</a></p> */}
             </div>
           </div>
         </div>
@@ -87,110 +93,77 @@ function Home() {
         <div className="container">
           <div className="row justify-content-center text-center mb-5 section-2-title">
             <div className="col-md-6">
-              <h2 className="text-center">Membres du projet</h2>
-              <p className="mb-5 lead">Présentation du groupe d'étudiants ayant réalisé ce projet</p>
+              <h2 className="text-center">Nos services</h2>
             </div>
           </div>
           <div className="row align-items-stretch">
-
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="post-entry-1 h-100 person-1">
-
-                <img src="https://image.freepik.com/vecteurs-libre/jeune-homme-avatar-dessin-anime-personnage-photo-profil_18591-55058.jpg" alt="Image6"
-                  className="img-fluid" />
-
-                <div className="post-entry-1-contents">
-                  <span className="meta">Product Owner</span>
-                  <h2>Patrick Tchoupe</h2>
-                  <p>Ce fût un plaisir de participer à un projet d'une telle envergure</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="post-entry-1 h-100 person-1">
-
-                <img src="https://us.123rf.com/450wm/dreamsvector/dreamsvector1710/dreamsvector171000223/87280917-jeune-afro-homme-avatar-.jpg?ver=6" alt="Image5"
-                  className="img-fluid" />
-
-                <div className="post-entry-1-contents">
-                  <span className="meta">Scrum master</span>
-                  <h2>Tresor Tekadam</h2>
-                  <p>On espère que cette appli vous sera utilsée en ces temps difficiles</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="post-entry-1 h-100 person-1">
-
-                <img src="https://www.web-soluces.net/webmaster/avatar/AvatarMakerCom-Garcon.png" alt="Image1"
-                  className="img-fluid" />
-
-                <div className="post-entry-1-contents">
-                  <span className="meta">Scrum master</span>
-                  <h2>Bilel Bouquoyoue</h2>
-                  <p>Ce projet a pour point central l'entraide, le plus important c'est vous !</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="post-entry-1 h-100 person-1">
-
-                <img src="https://media.gettyimages.com/vectors/man-portrait-face-icon-web-avatar-flat-style-vector-vector-id641304260" alt="Image2"
-                  className="img-fluid" />
-
-                <div className="post-entry-1-contents">
-                  <span className="meta">Team member</span>
-                  <h2>Joachim Sanglier </h2>
-                  <p>Super projet basé sur des valeurs importantes</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="post-entry-1 h-100 person-1">
-
-                <img src='https://media.gettyimages.com/vectors/man-portrait-face-icon-web-avatar-flat-style-vector-vector-id641304260' alt="Image3"
-                  className="img-fluid" />
-
-                <div className="post-entry-1-contents">
-                  <span className="meta">Team member</span>
-                  <h2>Florian Degives </h2>
-                  <p>C'est un plaisir de participer à un projet basé sur l'entraide.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="post-entry-1 h-100 person-1">
-
-                <img src='https://media.gettyimages.com/vectors/man-portrait-face-icon-web-avatar-flat-style-vector-vector-id641304260' alt="Image3"
-                  className="img-fluid" />
-
-                <div className="post-entry-1-contents">
-                  <span className="meta">Team member</span>
-                  <h2>Martin Perdaens</h2>
-                  <p>ça été une chouette expérience de développer un tel projet</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-4 col-md-6 mb-5">
-              <div className="post-entry-1 h-100 person-1">
-
-                <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_960_720.png" alt="Image4"
-                  className="img-fluid" />
-
-                <div className="post-entry-1-contents">
-                  <span className="meta">Team member</span>
-                  <h2>Sebastien Fantuzzi</h2>
-                  <p>Content d'avoir participé à ce très beau projet </p>
-                </div>
-              </div>
-            </div>
+            <Card style={{ width: '28rem' }}>
+              <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222970906-75743872-33d1-476b-9349-97a6a438eb6b.jpg" />
+              <Card.Body>
+                <Card.Title>Livraison</Card.Title>
+                <Card.Text>
+                nous comprenons l'importance de livrer vos colis à leur destination à temps et en excellent état. Nous offrons une gamme d'options de livraison pour répondre à vos besoins, que vous ayez besoin d'une livraison le jour même, le lendemain ou d'un envoi international.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '28rem' }}>
+              <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222972795-03928c0f-6433-4d04-9744-ee3a08cbcb84.jpg" />
+              <Card.Body>
+                <Card.Title>Location de véhicules</Card.Title>
+                <Card.Text>
+                Nous offrons une expérience de location exceptionnelle avec une large gamme de véhicules de haute qualité à choisir. Que vous ayez besoin d'une voiture pour les affaires ou les loisirs, nous proposons des options de location flexibles pour répondre à vos besoins, y compris des locations à court terme et à long terme.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '28rem' }}>
+              <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222972640-ba733cef-5494-4778-a86c-ad4c4c168017.jpg" />
+              <Card.Body>
+                <Card.Title>Déménagement</Card.Title>
+                <Card.Text>
+                Notre équipe de professionnels expérimentés est dédiée à offrir un service de déménagement fiable et efficace. Nous proposons des services d'emballage et de déballage, de chargement et de déchargement, ainsi que des options de stockage à court et à long terme pour vos biens.                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+            {/* <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card>
+            <Card style={{ width: '18rem' }}>
+              <Card.Img variant="top" src="holder.js/100px180" />
+              <Card.Body>
+                <Card.Title>Card Title</Card.Title>
+                <Card.Text>
+                  Some quick example text to build on the card title and make up the
+                  bulk of the card's content.
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+              </Card.Body>
+            </Card> */}
 
 
+
+
+          
           </div>
         </div>
       </div>
