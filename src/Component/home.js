@@ -1,10 +1,8 @@
 import React from "react";
-import { FaHandsHelping } from "react-icons/fa";
-import image_1 from "./../assets/images/Image_1.jpg"
+import image_2 from "./../assets/images/Image_2.jpg"
+import logo from "./../assets/images/logo1.png"
 import Card from 'react-bootstrap/Card';
 import Contact from "./contact"
-
-
 
 function Home() {
   return (
@@ -18,25 +16,17 @@ function Home() {
         </div>
         <div className="site-mobile-menu-body"></div>
       </div>
-
-
-
       <header className="site-navbar site-navbar-target" role="banner">
-
         <div className="container">
           <div className="row align-items-center position-relative">
 
             <div className="col-1">
-              <div className="site-logo">
-                <FaHandsHelping color='rgb(128,255,255)' size='3em' />
+              <div className="site-logo mt-3">
+                <img src={logo} alt="description_image" className="img-fluid" />
               </div>
             </div>
-
             <div className="col-9  text-right">
               <span className="d-inline-block d-lg-none"><a href="#" className="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span className="icon-menu h3 text-white"></span></a></span>
-
-
-
               <nav className="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
                 <ul className="site-menu main-menu js-clone-nav ml-auto ">
                   <li><a href="#about" className="nav-link" >A propos de nous </a></li>
@@ -45,11 +35,8 @@ function Home() {
                 </ul>
               </nav>
             </div>
-
-
           </div>
         </div>
-
       </header>
 
       <div className="ftco-blocks-cover-1">
@@ -59,7 +46,6 @@ function Home() {
           <div className="container">
             <div className="row align-items-center justify-content-left text-left">
               <div className="col-md-7 ">
-                {/* <h1 className="mb-3" style={{ fontFamily: 'revert' }}>XXXX</h1> */}
                 <p style={{ textAlign: 'justify' }}>Nous sommes spécialisés dans la fourniture de services de transport sûrs et efficaces pour les particuliers, les entreprises et les organisations de la région. Que vous ayez besoin de déplacer des biens, des équipements ou des personnes, nous sommes là pour vous aider.</p>
               </div>
             </div>
@@ -74,11 +60,11 @@ function Home() {
           <div className="row mt-5">
             <div className="col-lg-6 mb-5 mb-lg-0">
               <div className="img-years">
-                <img src={image_1} alt="description_image" className="img-fluid" />
+                <img src={image_2} alt="description_image" className="img-fluid" style={{ height: "25rem", width: "30rem" }} />
               </div>
 
             </div>
-            <div className="col-lg-5 ml-auto pl-lg-5 text-center">
+            <div className="col-lg-5 pl-lg-3 text-center">
               <p style={{ textAlign: 'justify' }}>Notre flotte de véhicules bien entretenus et nos chauffeurs expérimentés sont équipés pour gérer toutes sortes de besoins en matière de transport. Des livraisons locales aux trajets longue distance, nous avons les ressources et l'expertise pour mener à bien le travail dans les délais impartis et dans les limites du budget<br></br>
                 <br></br>Nos services sont disponibles 24 heures sur 24 et 7 jours sur 7, vous pouvez donc compter sur nous pour être là chaque fois que vous avez besoin de nous.
               </p>
@@ -95,7 +81,7 @@ function Home() {
             </div>
           </div>
           <div className="row align-items-stretch" style={{ fontSize: "14px" }}>
-            <div class="col-lg-4 ml-auto pl-lg-5">
+            <div className="col-lg-4 ml-auto pl-lg-5">
               <Card style={{ width: '25rem', height: '33rem' }}>
                 <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222970906-75743872-33d1-476b-9349-97a6a438eb6b.jpg" style={{ height: '20rem' }} />
                 <Card.Body>
@@ -105,13 +91,12 @@ function Home() {
                   <Card.Text>
                     <div style={{ textAlign: "left", }}>
                       nous comprenons l'importance de livrer vos colis à leur destination à temps et en excellent état. Nous offrons une gamme d'options de livraison pour répondre à vos besoins, que vous ayez besoin d'une livraison le jour même, le lendemain ou d'un envoi international.
-
                     </div>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </div>
-            <div class="col-lg-4 ml-auto pl-lg-5 ">
+            <div className="col-lg-4 ml-auto pl-lg-5 ">
               <Card style={{ width: '25rem', height: '33rem' }}>
                 <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222980521-47617623-7dc8-416d-80e0-804fe280f97c.jpg" style={{ height: '20rem' }} />
                 <Card.Body>
@@ -126,7 +111,7 @@ function Home() {
                 </Card.Body>
               </Card>
             </div>
-            <div class="col-lg-4 ml-auto pl-lg-5 ">
+            <div className="col-lg-4 ml-auto pl-lg-5 ">
               <Card style={{ width: '25rem', height: '33rem' }}>
                 <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222972640-ba733cef-5494-4778-a86c-ad4c4c168017.jpg" style={{ height: '20rem' }} />
                 <Card.Body>
@@ -135,7 +120,6 @@ function Home() {
                   </Card.Title>
                   <Card.Text>
                     <div style={{ textAlign: "left" }}>
-
                       Notre équipe de professionnels expérimentés est dédiée à offrir un service de déménagement fiable et efficace. Nous proposons des services d'emballage et de déballage, de chargement et de déchargement, ainsi que des options de stockage à court et à long terme pour vos biens.
                     </div>
                   </Card.Text>
@@ -146,24 +130,10 @@ function Home() {
           </div>
         </div>
       </div>
-
-
-
-
-      <div id="contactUs" className="site-footer" style={{backgroundImage: "url(" + "https://user-images.githubusercontent.com/52448401/222989122-c5ab2cc5-f826-4dfd-a866-13b9a2c93904.jpg" + ")" }} >
+      <div id="contactUs" className="site-footer" style={{ backgroundImage: "url(" + "https://user-images.githubusercontent.com/52448401/222989122-c5ab2cc5-f826-4dfd-a866-13b9a2c93904.jpg" + ")" }} >
         <Contact />
-
-        {/* <p>
-        Copyright &copy; {new Date().getFullYear()}  tous droits réservés
-      </p> */}
-
       </div>
-
     </div>
-
-
-
-
   )
 }
 

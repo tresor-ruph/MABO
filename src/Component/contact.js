@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./contact.css";
-import map_ico from "../assets/ico/ico_1.svg"
+import axios from "axios";
+
 
 const Contact = () => {
     const [email, setEmail] = useState("");
@@ -42,6 +43,16 @@ const Contact = () => {
             message,
             name,
         };
+        axios
+            .post("https://mabo-server.onrender.com/mailTo", data)
+            .then((res) => {
+                console.log(res);
+                showSuccessMess();
+            })
+            .catch((err) => {
+                showErrorMessage()
+                console.log(err.response)
+            });
     };
     return (
         <div >
@@ -50,37 +61,37 @@ const Contact = () => {
             </div>
             <div className="row" style={{ justifyContent: "center", marginTop: "100px" }}>
                 <div className="col-lg-4 ml-auto pl-lg-5 ">
-                    <div style={{ textAlign: "left", fontSize:"24px", color:"white" }} className="row mt-5">
+                    <div style={{ textAlign: "left", fontSize: "24px", color: "white" }} className="row mt-5">
                         <div className="social-div">
-                            <img
+                            {/* <img
                                 src="https://img.icons8.com/android/24/ffffff/phone.png"
                                 alt="Phone"
                                 className="social-icons"
-                            />
-                            <span class="ml-2">Appelez-nous:</span><br />
-                            <b class="ml-5">+32 494 94 55 03 </b>
+                            /> */}
+                            <span className="ml-2">Appelez-nous:</span><br />
+                            <b className="ml-5">+32 494 94 55 03 </b>
 
                         </div>
                         <div className=" mt-4">
-                            <img
+                            {/* <img
                                 src="https://img.icons8.com/android/24/ffffff/phone.png"
                                 alt="Phone"
                                 className="social-icons"
-                            />
-                            <span class="ml-2">Localisation:</span><br />
-                            <b class="ml-5">Rue sainte-adèle 10 5030 Gembloux</b>
+                            /> */}
+                            <span className="ml-2">Localisation:</span><br />
+                            <b className="ml-5">Rue sainte-adèle 10 5030 Gembloux</b>
 
                         </div>
 
                         <div className=" mt-4">
-                            <img
+                            {/* <img
                                 src="https://img.icons8.com/android/24/ffffff/phone.png"
                                 alt="Phone"
                                 className="social-icons"
-                            />
-                            <span class="ml-2">Disponible le:</span><br />
-                            <b class="ml-5">Lundis - vendredis </b><br />
-                            <b class="ml-5"> Les week-end sur reservation</b>
+                            /> */}
+                            <span className="ml-2">Disponible le:</span><br />
+                            <b className="ml-5">Lundis - vendredis </b><br />
+                            <b className="ml-5">Week-end sur reservation</b>
 
                         </div>
 
@@ -94,10 +105,11 @@ const Contact = () => {
                             name="email"
                             id="email"
                             placeholder="Nom"
-                            value={email}
+                            value={name}
                             onChange={(event) => handleName(event)}
                         />
                     </div>
+
 
                     <div className="form-group input-field">
                         <input
@@ -122,7 +134,7 @@ const Contact = () => {
                             onChange={(event) => handleMessage(event)}
                         ></textarea>
                     </div>
-                    <div  style={{marginRight: "40%" }}>
+                    <div style={{ marginRight: "40%" }}>
                         <button className="send-btn" onClick={() => submit()}>
                             {" "}
                             Envoyer
