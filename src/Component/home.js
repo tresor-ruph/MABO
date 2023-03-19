@@ -50,7 +50,7 @@ function Home() {
             <div className="row align-items-center justify-content-left text-left">
               <Zoom top>
               <div className="col-md-7 ">
-                <p style={{ textAlign: 'justify' }}>Nous sommes spécialisés dans la fourniture de services de transport sûrs et efficaces pour les particuliers, les entreprises et les organisations de la région. Que vous ayez besoin de déplacer des biens, des équipements ou des personnes, nous sommes là pour vous aider.</p>
+                <p style={{ textAlign: 'justify' }}>Nous sommes spécialisés dans la fourniture de services de transport sûrs et efficaces pour les particuliers, les entreprises et les organisations de la région. Que vous ayez besoin de déplacer des biens ou des équipements, nous sommes là pour vous aider.</p>
               </div>
               </Zoom>
             </div>
@@ -66,7 +66,7 @@ function Home() {
           <Fade left>
             <div className="col-lg-6 mb-5 mb-lg-0">
               <div className="img-years">
-                <img src={image_2} alt="description_image" className="img-fluid" style={{ height: "25rem", width: "30rem" }} />
+                <img src="https://user-images.githubusercontent.com/52448401/226168205-ef3d082e-31e1-4d79-b8e9-aa7b12eb8b81.jpg" alt="description_image" className="img-fluid" style={{ height: "25rem", width: "30rem" }} />
               </div>
             </div>
             </Fade>
@@ -112,11 +112,11 @@ function Home() {
                 <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222980521-47617623-7dc8-416d-80e0-804fe280f97c.jpg" style={{ height: '20rem' }} />
                 <Card.Body>
                   <Card.Title style={{ fontWeight: "bolder", textAlign: "left" }}>
-                    Location de véhicules
+                    Location de véhicules utilitaire
                   </Card.Title>
                   <Card.Text>
                     <div style={{ textAlign: "left" }}>
-                    Nous vous proposons une gamme de véhicules adaptés pour répondre à vos besoins en matière de transport. Que vous déménagiez dans une nouvelle maison, que vous ayez besoin d'un véhicule pour des travaux de construction ou que vous ayez besoin d'un fourgon pour transporter des marchandises, nous avons le véhicule qu'il vous faut.
+                    Nous offrons une expérience de location exceptionnelle avec une large gamme de véhicules utilitaire à choisir. Que vous déménagiez dans une nouvelle maison, que vous ayez besoin d'un véhicule pour des travaux de construction , nous proposons des options de location flexibles pour répondre à vos besoins.
                     </div>
                   </Card.Text>
                 </Card.Body>
