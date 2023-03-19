@@ -109,14 +109,14 @@ function Home() {
             <Fade bottom>
             <div className="col-lg-4 ml-auto pl-lg-5 ">
               <Card style={{ width: '25rem', height: '33rem' }}>
-                <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222980521-47617623-7dc8-416d-80e0-804fe280f97c.jpg" style={{ height: '20rem' }} />
+                <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/226177464-3bcf5878-9362-4967-af72-e0a0adff1662.png" style={{ height: '20rem' }} />
                 <Card.Body>
                   <Card.Title style={{ fontWeight: "bolder", textAlign: "left" }}>
                     Location de véhicules utilitaire
                   </Card.Title>
                   <Card.Text>
                     <div style={{ textAlign: "left" }}>
-                    Nous offrons une expérience de location exceptionnelle avec une large gamme de véhicules utilitaire à choisir. Que vous déménagiez dans une nouvelle maison, que vous ayez besoin d'un véhicule pour des travaux de construction , nous proposons des options de location flexibles pour répondre à vos besoins.
+                    Nous offrons une expérience de location exceptionnelle avec une large gamme de véhicules utilitaire à choisir.Si vous avez besoin d'un véhicule pour des travaux de construction, nous proposons des options de location flexibles pour répondre à vos besoins.
                     </div>
                   </Card.Text>
                 </Card.Body>
@@ -133,7 +133,7 @@ function Home() {
                   </Card.Title>
                   <Card.Text>
                     <div style={{ textAlign: "left" }}>
-                      Notre équipe de professionnels expérimentés est dédiée à offrir un service de déménagement fiable et efficace. Nous proposons des services d'emballage et de déballage, de chargement et de déchargement, ainsi que des options de stockage à court et à long terme pour vos biens.
+                      Notre équipe de professionnels expérimentés est dédiée à offrir un service de déménagement fiable et efficace. Nous proposons des services d'emballage et de déballage ainsi que de chargement et de déchargement.
                     </div>
                   </Card.Text>
                 </Card.Body>
