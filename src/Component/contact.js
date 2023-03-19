@@ -40,7 +40,6 @@ const Contact = () => {
         if (message.length < 3 || name.length < 3 || email.length < 3) {
             return;
         }
-        showErrorMessage();
         const data = {
             email,
             message,
@@ -49,10 +48,12 @@ const Contact = () => {
         axios
             .post("https://mabo-server.onrender.com/mailTo", data)
             .then((res) => {
+                console.log(res)
                 showSuccessMess();
             })
             .catch((err) => {
                 showErrorMessage()
+                console.log(err)
             });
     };
     return (
