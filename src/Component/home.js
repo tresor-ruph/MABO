@@ -1,6 +1,7 @@
 import React from "react";
 import image_2 from "./../assets/images/Image_2.jpg"
 import logo from "./../assets/images/logo1.png"
+import { Fade, Zoom } from "react-reveal";
 import Card from 'react-bootstrap/Card';
 import Contact from "./contact"
 
@@ -25,6 +26,7 @@ function Home() {
                 <img src={logo} alt="description_image" className="img-fluid" />
               </div>
             </div>
+            <Fade right>
             <div className="col-9  text-right">
               <span className="d-inline-block d-lg-none"><a href="#" className="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span className="icon-menu h3 text-white"></span></a></span>
               <nav className="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
@@ -35,6 +37,7 @@ function Home() {
                 </ul>
               </nav>
             </div>
+            </Fade>
           </div>
         </div>
       </header>
@@ -45,9 +48,11 @@ function Home() {
         }}>
           <div className="container">
             <div className="row align-items-center justify-content-left text-left">
+              <Zoom top>
               <div className="col-md-7 ">
                 <p style={{ textAlign: 'justify' }}>Nous sommes spécialisés dans la fourniture de services de transport sûrs et efficaces pour les particuliers, les entreprises et les organisations de la région. Que vous ayez besoin de déplacer des biens, des équipements ou des personnes, nous sommes là pour vous aider.</p>
               </div>
+              </Zoom>
             </div>
           </div>
         </div>
@@ -58,17 +63,20 @@ function Home() {
           <h2 className="text-center">A propos de nous</h2>
 
           <div className="row mt-5">
+          <Fade left>
             <div className="col-lg-6 mb-5 mb-lg-0">
               <div className="img-years">
                 <img src={image_2} alt="description_image" className="img-fluid" style={{ height: "25rem", width: "30rem" }} />
               </div>
-
             </div>
+            </Fade>
+            <Fade right>
             <div className="col-lg-5 pl-lg-3 text-center">
               <p style={{ textAlign: 'justify' }}>Notre flotte de véhicules bien entretenus et nos chauffeurs expérimentés sont équipés pour gérer toutes sortes de besoins en matière de transport. Des livraisons locales aux trajets longue distance, nous avons les ressources et l'expertise pour mener à bien le travail dans les délais impartis et dans les limites du budget<br></br>
                 <br></br>Nos services sont disponibles 24 heures sur 24 et 7 jours sur 7, vous pouvez donc compter sur nous pour être là chaque fois que vous avez besoin de nous.
               </p>
             </div>
+            </Fade>
           </div>
         </div>
       </div>
@@ -81,6 +89,7 @@ function Home() {
             </div>
           </div>
           <div className="row align-items-stretch" style={{ fontSize: "14px" }}>
+          <Fade left>
             <div className="col-lg-4 ml-auto pl-lg-5">
               <Card style={{ width: '25rem', height: '33rem' }}>
                 <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222970906-75743872-33d1-476b-9349-97a6a438eb6b.jpg" style={{ height: '20rem' }} />
@@ -96,6 +105,8 @@ function Home() {
                 </Card.Body>
               </Card>
             </div>
+            </Fade>
+            <Fade bottom>
             <div className="col-lg-4 ml-auto pl-lg-5 ">
               <Card style={{ width: '25rem', height: '33rem' }}>
                 <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222980521-47617623-7dc8-416d-80e0-804fe280f97c.jpg" style={{ height: '20rem' }} />
@@ -105,12 +116,14 @@ function Home() {
                   </Card.Title>
                   <Card.Text>
                     <div style={{ textAlign: "left" }}>
-                      Nous offrons une expérience de location exceptionnelle avec une large gamme de véhicules de haute qualité à choisir. Que vous ayez besoin d'une voiture pour les affaires ou les loisirs, nous proposons des options de location flexibles pour répondre à vos besoins, y compris des locations à court terme et à long terme.
+                    Nous vous proposons une gamme de véhicules adaptés pour répondre à vos besoins en matière de transport. Que vous déménagiez dans une nouvelle maison, que vous ayez besoin d'un véhicule pour des travaux de construction ou que vous ayez besoin d'un fourgon pour transporter des marchandises, nous avons le véhicule qu'il vous faut.
                     </div>
                   </Card.Text>
                 </Card.Body>
               </Card>
             </div>
+            </Fade>
+            <Fade right>
             <div className="col-lg-4 ml-auto pl-lg-5 ">
               <Card style={{ width: '25rem', height: '33rem' }}>
                 <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/222972640-ba733cef-5494-4778-a86c-ad4c4c168017.jpg" style={{ height: '20rem' }} />
@@ -126,6 +139,7 @@ function Home() {
                 </Card.Body>
               </Card>
             </div>
+            </Fade>
 
           </div>
         </div>

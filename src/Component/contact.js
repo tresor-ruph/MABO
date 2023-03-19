@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./contact.css";
 import axios from "axios";
+import { Fade } from "react-reveal";
+
 
 
 const Contact = () => {
@@ -20,7 +22,7 @@ const Contact = () => {
     };
     const showSuccessMess = () => {
         document.getElementById("alertMess").innerHTML =
-            "<div style='background-color: green; width: 100%; margin-top: 2rem; height: 6rem; text-align: center; font-size: 2rem; color: white'>Email send Successfully</div>";
+            "<div style='color: green; font-weight: bolder; margin-top: 2rem; text-align: left; font-size: 2rem'>Mail envoyé</div>";
 
         setTimeout(function () {
             window.location.reload()
@@ -28,7 +30,7 @@ const Contact = () => {
     };
     const showErrorMessage = () => {
         document.getElementById("alertMess").innerHTML =
-            "<div style='background-color: red; width: 100%; margin-top: 2rem; height: 6rem; text-align: center; font-size: 2rem; color: white'>An error occured</div>";
+            "<div style='margin-top: 2rem; text-align: left; font-size: 2rem; color: red'>Une erreur est survenue</div>";
 
         setTimeout(function () {
             document.getElementById("alertMess").innerHTML = ""
@@ -38,6 +40,7 @@ const Contact = () => {
         if (message.length < 3 || name.length < 3 || email.length < 3) {
             return;
         }
+        showErrorMessage();
         const data = {
             email,
             message,
@@ -46,12 +49,10 @@ const Contact = () => {
         axios
             .post("https://mabo-server.onrender.com/mailTo", data)
             .then((res) => {
-                console.log(res);
                 showSuccessMess();
             })
             .catch((err) => {
                 showErrorMessage()
-                console.log(err.response)
             });
     };
     return (
@@ -60,89 +61,81 @@ const Contact = () => {
                 <h2 >Contactez Nous</h2>
             </div>
             <div className="row" style={{ justifyContent: "center", marginTop: "100px" }}>
-                <div className="col-lg-4 ml-auto pl-lg-5 ">
-                    <div style={{ textAlign: "left", fontSize: "24px", color: "white" }} className="row mt-5">
-                        <div className="social-div">
-                            {/* <img
-                                src="https://img.icons8.com/android/24/ffffff/phone.png"
-                                alt="Phone"
-                                className="social-icons"
-                            /> */}
-                            <span className="ml-2">Appelez-nous:</span><br />
-                            <b className="ml-5">+32 494 94 55 03 </b>
+                <Fade left>
+                    <div className="col-lg-4 ml-auto pl-lg-5 ">
+                        <div style={{ textAlign: "left", fontSize: "24px", color: "white" }} className="row mt-5">
+                            <div className="social-div">
+
+                                <span className="ml-2">Appelez-nous:</span><br />
+                                <b className="ml-5">+32 494 94 55 03 </b>
+
+                            </div>
+                            <div className=" mt-4">
+
+                                <span className="ml-2">Localisation:</span><br />
+                                <b className="ml-5">Rue sainte-adèle 10 5030 Gembloux</b>
+
+                            </div>
+
+                            <div className=" mt-4">
+
+                                <span className="ml-2">Disponible le:</span><br />
+                                <b className="ml-5">Lundis - vendredis </b><br />
+                                <b className="ml-5">Week-end sur reservation</b>
+
+                            </div>
 
                         </div>
-                        <div className=" mt-4">
-                            {/* <img
-                                src="https://img.icons8.com/android/24/ffffff/phone.png"
-                                alt="Phone"
-                                className="social-icons"
-                            /> */}
-                            <span className="ml-2">Localisation:</span><br />
-                            <b className="ml-5">Rue sainte-adèle 10 5030 Gembloux</b>
-
+                    </div>
+                </Fade>
+                <Fade right>
+                    <div className="col-lg-6 ml-auto pl-lg-5"  >
+                        <div className="form-group input-field">
+                            <input
+                                type="email"
+                                className="form-control"
+                                name="email"
+                                id="email"
+                                placeholder="Nom"
+                                value={name}
+                                onChange={(event) => handleName(event)}
+                            />
                         </div>
 
-                        <div className=" mt-4">
-                            {/* <img
-                                src="https://img.icons8.com/android/24/ffffff/phone.png"
-                                alt="Phone"
-                                className="social-icons"
-                            /> */}
-                            <span className="ml-2">Disponible le:</span><br />
-                            <b className="ml-5">Lundis - vendredis </b><br />
-                            <b className="ml-5">Week-end sur reservation</b>
 
+                        <div className="form-group input-field">
+                            <input
+                                type="email"
+                                className="form-control"
+                                name="email"
+                                id="email"
+                                placeholder="Email"
+                                value={email}
+                                onChange={(event) => handleEmail(event)}
+                            />
+                        </div>
+                        <div className="form-group input-field">
+                            <textarea
+                                name="message"
+                                className="form-control message"
+                                id="message"
+                                cols="30"
+                                rows="4"
+                                value={message}
+                                placeholder="Message"
+                                onChange={(event) => handleMessage(event)}
+                            ></textarea>
+                        </div>
+                        <div style={{ marginRight: "40%" }}>
+                            <button className="send-btn" onClick={() => submit()}>
+                                {" "}
+                                Envoyer
+                            </button>
                         </div>
 
+                        <div id="alertMess"></div>
                     </div>
-                </div>
-                <div className="col-lg-6 ml-auto pl-lg-5"  >
-                    <div className="form-group input-field">
-                        <input
-                            type="email"
-                            className="form-control"
-                            name="email"
-                            id="email"
-                            placeholder="Nom"
-                            value={name}
-                            onChange={(event) => handleName(event)}
-                        />
-                    </div>
-
-
-                    <div className="form-group input-field">
-                        <input
-                            type="email"
-                            className="form-control"
-                            name="email"
-                            id="email"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(event) => handleEmail(event)}
-                        />
-                    </div>
-                    <div className="form-group input-field">
-                        <textarea
-                            name="message"
-                            className="form-control message"
-                            id="message"
-                            cols="30"
-                            rows="4"
-                            value={message}
-                            placeholder="Message"
-                            onChange={(event) => handleMessage(event)}
-                        ></textarea>
-                    </div>
-                    <div style={{ marginRight: "40%" }}>
-                        <button className="send-btn" onClick={() => submit()}>
-                            {" "}
-                            Envoyer
-                        </button>
-                    </div>
-
-                    <div id="alertMess"></div>
-                </div>
+                </Fade>
             </div>
         </div>
     );
