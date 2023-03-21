@@ -109,7 +109,7 @@ function Home() {
             <Fade bottom>
             <div className="col-lg-4 ml-auto pl-lg-5 ">
               <Card style={{ width: '25rem', height: '33rem' }}>
-                <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/226177464-3bcf5878-9362-4967-af72-e0a0adff1662.png" style={{ height: '20rem' }} />
+                <Card.Img variant="top" src="https://user-images.githubusercontent.com/52448401/226722518-a24ecc20-d1b3-41b0-8be5-284177948dbd.jpeg" style={{ height: '20rem' }} />
                 <Card.Body>
                   <Card.Title style={{ fontWeight: "bolder", textAlign: "left" }}>
                     Location de véhicules utilitaire
